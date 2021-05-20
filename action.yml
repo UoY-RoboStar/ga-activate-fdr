@@ -1,0 +1,20 @@
+name: 'Activate FDR4 license'
+description: 'Provides the facility to activate FDR4's license via parameters.'
+inputs:
+  license-type:
+    description: 'License type, with 2 for academic'
+    required: false
+    default: 2
+  name:
+    description: 'Name for the license'
+    required: true
+    default: 'Anonymous'
+  email:
+    description: 'E-mail address for the license'
+    required: true
+    default: 'anonymous@github.com'
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/goodbye.sh \"${{ inputs.license-type }}\" \"${{ inputs.email }}\" \"${{ inputs.name }}\"
+      shell: bash
