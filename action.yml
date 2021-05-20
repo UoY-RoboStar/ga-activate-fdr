@@ -16,5 +16,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/goodbye.sh \"${{ inputs.license-type }}\" \"${{ inputs.email }}\" \"${{ inputs.name }}\"
+    - run: ${{ github.action_path }}/get_license.sh \"${{ inputs.license-type }}\" \"${{ inputs.email }}\" \"${{ inputs.name }}\"
       shell: bash
