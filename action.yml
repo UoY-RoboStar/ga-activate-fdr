@@ -1,5 +1,5 @@
 name: 'Activate FDR4 license'
-description: 'Provides the facility to activate FDR4's license via parameters.'
+description: 'Provides the facility to activate FDR4 license via parameters.'
 inputs:
   license-type:
     description: 'License type, with 2 for academic'
